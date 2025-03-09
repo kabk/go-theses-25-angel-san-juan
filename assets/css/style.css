@@ -1,171 +1,281 @@
-@charset "UTF-8";
-
-
-
-/* @FONT FACE (enable the use of 'custom fonts' inside your document) */
-
-/* 
-  You can use 'fontsquirrel' (https://www.fontsquirrel.com) 
-  or 'transfonter' (https://transfonter.org)
-  to generate your own font for the web from .ttf or .oft files 
-*/
-
-@font-face {
-    font-family: 'Your Font Name';
-    src: url('../fonts/yourfontname/yourfontname-roman.woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@font-face {
-    font-family: 'Your Font Name';
-    src: url('../fonts/yourfontname/yourfontname-italic.woff2');
-    font-weight: normal;
-    font-style: italic;
-    font-display: block;
-}
-
-
-
-/* VARIABLES */
-
-:root {
-  /* Color values */
-  --color-background: rgba(255,255,255,1);
-  --color-text: rgba(0,0,0,1);
-  --color-text-link: rgba(0,0,0,1);
-  --color-text-link-hover: rgba(0,0,0,1);
-  /* Font values */
-  --font-text: 'Your Font Name', 'Helvetica', 'Arial', sans-serif;
-  --font-size: 24px;
-  /* Margin value */
-  --margin: 1rem;
-}
-
-
-
-/* GENERAL STYLES */
-
-img {
-  filter: grayscale(100%);
+html, body {
+  height: 100%;
+  font-family:Arial, Helvetica, sans-serif;
+  color: black;
+  background-color: grey;
+  overflow-x: hidden;
 }
 
 html {
-  font: var(--font-size) var(--font-family);
+  /* font: var(--font-size) var(--font-family);
   color: var(--color-text);
-  background-color: var(--color-background);
+  background-color: var(--color-background);   */
+  height: 100%;
+  font-family:Arial, Helvetica, sans-serif;
+  overflow: hidden;
 }
 
 body {
   position:relative;
-  background-color: var(--color-background);
+  /* background-color: var(--color-background);
   font: var(--font-size) var(--font-family);
-  color: var(--color-text);
-  width:100%;
+  color: var(--color-text); */
+  width: 100%;
   height:auto;
-  overflow-y:auto;
+  overflow-y: hidden;  
+  height: 100%;
 }
 
 a {
-  color: var(--color-text-link);
-  text-decoration: underline;
+  font-family:Arial, Helvetica, sans-serif;
+  /* font-family: 'Times New Roman', Times, serif; */
+  font-size: 1.15rem;
+  line-height: normal;
+  word-break: break-all; 
+  text-decoration: none;
+  color: black;
+  -webkit-text-stroke: .09rem grey;
 }
 
 a:hover {
-  color: var(--color-text-link-hover);
-  text-decoration: underline;
+  text-decoration: none;
+  -webkit-text-stroke: 0px black;
+  color: black;
 }
 
-
-h1{
-  display: block;
-  font-family: serif;
-  font-size: 18em;
-  text-align: left;
-  margin-top: 0em;
-  margin-bottom: 0.67em;
-  margin-left: 0;
-  margin-right: 0;
-  /* font-weight: bold; */
+h1, h2 {
+  font-family:Arial, Helvetica, sans-serif;
+  text-align: center;
+  letter-spacing: -1px;
+  color: rgb(80, 80, 80);
 }
 
-h2{
-  display: block;
-  font-family: serif;
-  font-size: 8em;
-  text-align: right;
-  margin-top: 0.67em;
-  margin-bottom: 0.67em;
-  margin-left: 0;
-  margin-right: 0;
-  /* font-weight: bold; */}
+h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0 25rem;
+  line-height: 2.7rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 1rem 0 1rem;
+}
 
 h3{
-  text-align: left;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: normal;
+  margin: 0;
+  margin: 0rem 0rem 0rem 0rem;
+  word-break: normal;
 }
 
-h4, h5, h6{
-  text-align: left;
-}
-
-p{
-  display: block;
-  font-family: serif;
-  font-size: 2em;
+h4 {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 1rem;
   text-align: center;
-  margin-top: 0.67em;
-  margin-bottom: 0.67em;
-  margin-left: 0;
-  margin-right: 0;
-  /* font-weight: bold; */
+  margin: 1rem 0rem 0rem 0rem;
 }
 
-ol, ul{
-  text-align: left;  
-  font-size: 12em;
-
+p {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  font-family:Arial, Helvetica, sans-serif;
 }
-
-blockquote{
-  text-align: right;
-
+p + p {
+  text-indent: 5rem;
 }
-
-hr{
-  text-align: right;
-}
-
 
 
 /* PAGE STYLES */
-
-/* page structure */
-
-div.page-wrapper {
-  /* the element that 'wraps' everything */
-  padding: var(--margin);
+.header {
+	background-image: linear-gradient(rgb(237, 237, 237),rgb(206, 206, 206));
+  position: sticky;
+  top: 0;
+  height: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
-/* navigation */
- 
-nav{
-  
+.header nav a {
+  margin: 3rem;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-/* content */
-
-main{
- 
+/* .slide-box {
+  position: fixed;
+  top: -100%; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: top 0.6s ease-out;
 }
 
-summary{
-  
+.slide-box.active {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(230, 230, 230);
+  color: black;
+  border: 0.5px solid black;
+} */ */
+
+.buttons {
+  display: flex;
+  /* gap: 10px; */
+}
+
+button {
+  cursor: pointer;
+  transition: background 0.3s;
+  padding: 10px 20px;
+  /* border-radius: 5px; */
+  width: 60px;
+  height: 60px;
+}
+
+.remove-btn {
+  background: #ffffff;
+}
+
+.remove-btn:hover {
+  background: #000000;
+  justify-content: center;
+  align-items: center;}
+
+
+
+.item2 {
+  grid-area: frame;
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  background: url('/assets/images/1px-left.jpg') ;
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+
+.item3 {
+  grid-area: main;
+  background: url('/assets/images/1px-right.jpg') ;
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+
+.grid-container {
+  width:200vw;
+  height: 100vh;
+  display: flex;
+  transform: translateX(0vw);
+  transition: transform 500ms ease-in-out 0ms;
+  background-color: grey;
+  /* border: 0.5px solid black; */
+}
+
+.grid-container.active{
+  transform: translateX(-100vw);
+}
+
+.grid-container > div {
+  flex: 1;
+}
+
+.grid-container > div:first-child {
+  height: 100%;
+  flex-basis: 12rem;
+  flex-shrink: 0;  
+  background-color: grey;
+}
+
+.grid-container > div:last-child {
+  height: 100%;
+  text-align: center;
+  flex-basis: 12rem;
+  flex-shrink: 0;
+  background-color: grey;
+}
+
+.grid-container > div:nth-child(2), div:nth-child(3)  {
+  overflow-y: auto;
+  border: 0.5px solid black;
+  background-color: grey;
+}
+
+.stick-to-top {
+  align-self: start;
+  position: sticky;
+  top: 0;
+}
+
+body.home .grid-container > div:nth-child(2),
+body.home .grid-container > div:nth-child(3) {
+  padding: 2rem;
+  flex-basis: 100%;
+}
+
+body.home .grid-container > div:nth-child(2) {
+  flex-basis: calc(100% - 1rem);
+}
+
+body.home .grid-container > div:nth-child(3) {
+  flex-basis: calc(100% - 1rem);
+}
+
+/* FOOTNOTES */
+.footnote-ref {
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #fef39c;
+  padding: 0px 3px 0px 3px;
+}
+
+.footnote-popup {
+  position: absolute;
+  background: #fef39c;
+  color: black;
+  border: 1px solid black;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+  max-width: 220px;
+  display: none;
+  z-index: 1000;
+
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: .8rem;
+  padding: 1.8rem .5rem .5rem .5rem;
+}
+
+/* Title bar inside the yellow box */
+.footnote-popup .titlebar {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 5px;
+color: black;
+inset: 0 0 auto 0;
+position: absolute;
+padding: 3px 3px 3px 10px;
+background: #FEEA3D;
 }
 
 
-
-
+.footnotes{
+visibility: hidden;
+}
 
 
 /* UTILITY CLASSES */
@@ -199,52 +309,123 @@ summary{
 /* styles for 'mobile', screen sizes up to 779px, should covers 'mobile' and 'tablet' */
 /* style this one first and then use the subsequent ones in a cascading way (from general to specific) */
 
+
+@media screen and (min-width: 1200px) {
+
+  body.home .grid-container > div:nth-child(2){
+    flex-basis: 100%;
+  }  
+
+  body.home .grid-container > div:nth-child(3) {
+    flex-basis: 100%;
+  }
+  body.home .grid-container > div:last-child {
+    display: block;
+  } 
+
+
+  .grid-container,
+  .grid-container.active {
+    width: 100vw;
+    transform: none;
+  }
+
+ #home,
+ .mobile-menu,
+  #toggleButton, 
+  #resetButton {
+    visibility: hidden;
+    display: none;
+  }
+}
+
 @media (max-width: 779px) {
 
   /* your 'mobile' overriding css properties here */
 
-
-
-  /* utility classes, mobile */
-
-  .desktop-only{
-    display:none;
+  .header nav a:nth-child(n+4) { /* Hides links after the 3rd one */
+    display: none;
   }
 
-  .mobile-only{
-    display:block;
+  #desktop{
+    display: none;
   }
 
+  a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: normal;
+    word-break: break-all; 
+    text-decoration: none;
+    color: black;
+    -webkit-text-stroke: .09rem grey;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    -webkit-text-stroke: 0px black;
+    color: black;
+  }
+  
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0rem 1rem 0rem;
+    word-break: normal;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin: 10rem 0rem 10rem 0rem;
+    text-align: center;
+  }
+  
+  h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: normal;
+    margin: 0;
+    margin: 0rem 0rem 0rem 0rem;
+    word-break: normal;
+  }
+  
+h4 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0rem 0rem 0rem 0rem;
+    color: grey;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  p + p {
+    text-indent: 2.2em;
+  }
+  
+#toggleButton {
+  margin: 1rem;
+  color: grey;
 }
 
 
+  body.home .grid-container > div:first-child, div:last-child {
+    display: none;
+  }
 
-/* use this query to apply style changes to smaller smartphones sizes (like an iPhone 5S or SE 2016), max size of 339px */
+/* 
+  body.home .grid-container > div:nth-child(2) {
+    flex-basis: calc(100%);
+  }
+  
+  body.home .grid-container > div:nth-child(3) {
+    flex-basis: calc(100%);
 
-@media (max-width: 339px) {
-
-  /* your overriding css properties here */
-
+} */
 }
-
-
-
-/* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
-
-@media (max-width: 779px) and (orientation: landscape) {
-
-   /* your overriding css properties here */
-
-}
-
-
-
-/* use this query to apply style for 'small' desktop screens */
-
-@media (min-width: 780px) and (max-width: 992px) {
-
-  /* your overriding css properties here */
-
-}
-
-
