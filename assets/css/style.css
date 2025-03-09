@@ -164,16 +164,10 @@ button {
   width: inherit;
   height: inherit;
   object-fit: cover;
-  background: url('/assets/images/1px-left.jpg') ;
-  background-repeat: repeat-y;
-  background-size: 100%;
 }
 
 .item3 {
   grid-area: main;
-  background: url('/assets/images/1px-right.jpg') ;
-  background-repeat: repeat-y;
-  background-size: 100%;
 }
 
 .grid-container {
@@ -229,11 +223,16 @@ body.home .grid-container > div:nth-child(3) {
 
 body.home .grid-container > div:nth-child(2) {
   flex-basis: calc(100% - 1rem);
+  background: url('/assets/images/1px-left.jpg') ;
+  background-repeat: repeat-y;
+  background-size: 100%;
 }
 
 body.home .grid-container > div:nth-child(3) {
   flex-basis: calc(100% - 1rem);
-}
+  background: url('/assets/images/1px-right.jpg') ;
+  background-repeat: repeat-y;
+  background-size: 100%;}
 
 /* FOOTNOTES */
 .footnote-ref {
