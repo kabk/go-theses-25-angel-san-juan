@@ -29,7 +29,7 @@ docReady(function() {
 
 
 
-
+// FOOTNOTES
 document.addEventListener("DOMContentLoaded", function () {
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Create titlebar for footnote number
                 let titlebar = document.createElement("div");
                 titlebar.className = "titlebar";
-                titlebar.textContent = `[${footnoteNumber}]`;
+                titlebar.textContent = `${footnoteNumber}`;
 
                 // Create content section
                 let content = document.createElement("div");
@@ -74,6 +74,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 });
             });
+
+
+
 
         } else {
             // DESKTOP: Hover to show footnote
@@ -106,3 +109,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// ABOUT
+function showBox() {
+    document.querySelector(".slide-box").classList.add("active");
+}
+
+function hideBox() {
+    document.querySelector(".slide-box").classList.remove("active");
+}
