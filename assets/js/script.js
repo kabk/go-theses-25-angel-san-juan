@@ -28,6 +28,14 @@ docReady(function() {
 });
 
 
+// ABOUT
+function showBox() {
+    document.querySelector(".slide-box").classList.add("active");
+}
+
+function hideBox() {
+    document.querySelector(".slide-box").classList.remove("active");
+}
 
 // FOOTNOTES
 document.addEventListener("DOMContentLoaded", function () {
@@ -109,12 +117,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-// ABOUT
-function showBox() {
-    document.querySelector(".slide-box").classList.add("active");
-}
-
-function hideBox() {
-    document.querySelector(".slide-box").classList.remove("active");
-}

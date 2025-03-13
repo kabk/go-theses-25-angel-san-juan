@@ -8,32 +8,23 @@ html, body {
   height: 100%;
   font-family:Arial, Helvetica, sans-serif;
   color: black;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 html {
-  /* font: var(--font-size) var(--font-family);
-  color: var(--color-text);
-  background-color: var(--color-background);   */
   height: 100%;
   font-family:Arial, Helvetica, sans-serif;
-  overflow: hidden;
 }
 
 body {
   position:relative;
-  /* background-color: var(--color-background);
-  font: var(--font-size) var(--font-family);
-  color: var(--color-text); */
   width: 100%;
   height:auto;
-  overflow-y: hidden;  
   height: 100%;
 }
 
 a {
   font-family:Arial, Helvetica, sans-serif;
-  /* font-family: 'Times New Roman', Times, serif; */
   font-size: 1.15rem;
   line-height: normal;
   word-break: break-all; 
@@ -57,7 +48,7 @@ h1, h2 {
 
 h1 {
   font-size: 2.5rem;
-  margin: 3rem 0 25rem;
+  margin: 3.5rem 0 25rem;
   line-height: 2.7rem;
 }
 
@@ -67,13 +58,10 @@ h2 {
 }
 
 h3{
-  font-family:Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  line-height: 1.2rem;
-  font-weight: normal;
-  margin: 0;
-  margin: 0rem 0rem 0rem 0rem;
-  word-break: normal;
+  font-size: 2.3rem;
+  margin: .6rem 1rem .6rem 1rem;
+  line-height: 2.4rem;
+  letter-spacing: -1px;
 }
 
 h4 {
@@ -87,18 +75,9 @@ p {
   font-size: 1.1rem;
   line-height: 1.4rem;
   font-family:Arial, Helvetica, sans-serif;
-  /* text-align: justify;
-  text-justify: inter-word; */
 }
 p + p {
   text-indent: 5rem;
-}
-
-h5 {
-  font-size: 2.3rem;
-  margin: .6rem 1rem .6rem 1rem;
-  line-height: 2.4rem;
-  letter-spacing: -1px;
 }
 
 /* PAGE STYLES */
@@ -114,11 +93,18 @@ h5 {
   z-index: 1;
 }
 
+/* PASCAL */
+/* .header nav#desktop {
+  width: 100%;
+  padding-inline: clamp(1rem, 1.5vw, 2rem);
+  display:  flex;
+  justify-content: space-between;
+} */
 .header nav a {
-  margin: 3rem;
-  font-size: 1rem;
-  text-decoration: none;
-  cursor: pointer;
+margin: 2rem;
+font-size: 1rem;
+text-decoration: none;
+cursor: pointer;
 }
 
 .slide-box {
@@ -147,10 +133,6 @@ h5 {
   transform: translate(-50%, -50%);
   color: black;
   border: 0.5px solid black;
-} */
-
-/* .buttons {
-  display: flex;
 } */
 
 button {
@@ -196,10 +178,6 @@ button {
   transform: translateX(-100vw);
 }
 
-.grid-container > div {
-  flex: 1;
-}
-
 .grid-container > div:first-child {
   height: 100%;
   flex-basis: 12rem;
@@ -235,16 +213,17 @@ body.home .grid-container > div:nth-child(3) {
 
 body.home .grid-container > div:nth-child(2) {
   flex-basis: calc(100% - 1rem);
-  background: url('/assets/images/1px-left.jpg') ;
+  background: url('../images/1px-left.jpg') ;
   background-repeat: repeat-y;
   background-size: 100%;
 }
 
 body.home .grid-container > div:nth-child(3) {
   flex-basis: calc(100% - 1rem);
-  background: url('/assets/images/1px-right.jpg') ;
+  background: url('../images/1px-right.jpg') ;
   background-repeat: repeat-y;
-  background-size: 100%;}
+  background-size: 100%;
+}
 
 /* FOOTNOTES */
 .footnote-ref {
@@ -283,57 +262,22 @@ padding: 3px 3px 3px 10px;
 background: #FEEA3D;
 }
 
-
 .footnotes{
 visibility: hidden;
 }
 
 
-/* UTILITY CLASSES */
-
-/* hide desktop mobile etc */
-
-/* .desktop-only {
-  display: block;
-} */
-
-/* .mobile-only {
-  display: none;
-} */
 
 
 
 
-
-/* WEBSITE MEDIA QUERIES */
-
-/* responsive typeface for various breaking points, sets the default 'rem' value */
-@media (max-width: 299px) { :root{--font-size: 18px;} html, body {font: var(--font-size) var(--font-text); } }
-@media (min-width: 299px) and (max-width: 340px) { :root{--font-size: 19px;} html, body {font: var(--font-size) var(--font-text); } }
-@media (min-width: 340px) and (max-width: 440px) { :root{--font-size: 20px;} html, body {font: var(--font-size) var(--font-text); } }
-@media (min-width: 441px) and (max-width: 779px) { :root{--font-size: 19px;} html, body {font: var(--font-size) var(--font-text); } }
-@media (min-width: 780px) and (max-width: 992px) { :root{--font-size: 20px;} html, body {font: var(--font-size) var(--font-text); } }
-@media (min-width: 993px) and (max-width: 1200px) { :root{--font-size: 21px;} html, body {font: var(--font-size) var(--font-text); } }
-@media (min-width: 1201px) and (max-width: 1320px) { :root{--font-size: 22px;} html, body {font: var(--font-size) var(--font-text); } }
-@media (min-width: 1321px) { :root{--font-size: 24px;} html, body {font: var(--font-size) var(--font-text); } }
-
-/* styles for 'mobile', screen sizes up to 779px, should covers 'mobile' and 'tablet' */
-/* style this one first and then use the subsequent ones in a cascading way (from general to specific) */
-
-
+/* DESKTOP VERSION */
 @media screen and (min-width: 1200px) {
 
-  body.home .grid-container > div:nth-child(2){
-    flex-basis: 100%;
-  }  
-
+  body.home .grid-container > div:nth-child(2),
   body.home .grid-container > div:nth-child(3) {
     flex-basis: 100%;
   }
-  body.home .grid-container > div:last-child {
-    display: block;
-  } 
-
 
   .grid-container,
   .grid-container.active {
@@ -349,15 +293,32 @@ visibility: hidden;
   }
 }
 
-@media (max-width: 768px) {
 
-  /* your 'mobile' overriding css properties here */
 
-  #desktop{
+/* MOBILE VERSION */
+@media (max-width: 1200px) {
+
+  body.home .grid-container > div:first-child, 
+  body.home .grid-container > div:last-child {
     display: none;
   }
+  
+#home,
+#about-bottom,
+ #toggleButton{
+   visibility: visible;
+ }
+ 
+#toggleButton {
+  margin: 1rem;
+  color: grey;
+}
 
-  a {
+#desktop{
+  display: none;
+}
+  
+a {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     line-height: normal;
@@ -429,21 +390,10 @@ h4 {
   text-align: center ;
   margin: -.5rem 2rem 4rem 2rem;
   color: grey;
-  /* text-align: justify; */
-}
-  
-#toggleButton {
-  margin: 1rem;
-  color: grey;
 }
 
 
-  body.home .grid-container > div:first-child, div:last-child {
-    display: none;
-  }
-
-
-  .footnote-popup {
+  /* .footnote-popup {
     position: absolute;
     background: #fef39c;
     color: black;
@@ -459,5 +409,5 @@ h4 {
     font-family:Arial, Helvetica, sans-serif;
     font-size: .8rem;
     padding: 1.8rem .5rem .5rem .5rem;
-  }
+  } */
 }
