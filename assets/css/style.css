@@ -42,19 +42,27 @@ a:hover {
 h1, h2 {
   font-family:Arial, Helvetica, sans-serif;
   text-align: center;
-  letter-spacing: -1px;
-  color: rgb(80, 80, 80);
+  letter-spacing: -1.5px;
 }
 
 h1 {
   font-size: 2.5rem;
   margin: 3.5rem 0 25rem;
   line-height: 2.7rem;
+  color: rgb(80, 80, 80);
 }
 
 h2 {
   font-size: 2rem;
-  margin: 1rem 0 1rem;
+  margin: 7rem 0rem 2rem;
+  position: sticky;
+  top: 0;
+  color: rgb(204, 204, 204);
+padding: 0rem 0rem 0rem 0rem;
+  background-color: rgb(129, 129, 129);
+ z-index: 1;
+ /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); */
+ border: .5px solid black;
 }
 
 h3{
@@ -92,14 +100,13 @@ p + p {
   align-items: center;
   z-index: 1;
 }
+/* 
+#introduction, #exclusivity, #aura, #control, #conclusion, #bibliography {
+  margin: 15rem 100rem 10rem;
+  background: #fef39c;
 
-/* PASCAL */
-/* .header nav#desktop {
-  width: 100%;
-  padding-inline: clamp(1rem, 1.5vw, 2rem);
-  display:  flex;
-  justify-content: space-between;
 } */
+
 .header nav a {
 margin: 2rem;
 font-size: 1rem;
@@ -242,7 +249,7 @@ body.home .grid-container > div:nth-child(3) {
   font-size: 0.9rem;
   max-width: 220px;
   display: none;
-  z-index: 1000;
+  z-index: 1;
 
   font-family:Arial, Helvetica, sans-serif;
   font-size: .8rem;
@@ -346,7 +353,7 @@ a {
   
   h2 {
     font-size: 2rem;
-    margin: 10rem 0rem 10rem 0rem;
+    margin: 9rem 0rem 10rem 0rem;
     text-align: center;
   }
   
@@ -393,21 +400,4 @@ h4 {
 }
 
 
-  /* .footnote-popup {
-    position: absolute;
-    background: #fef39c;
-    color: black;
-    border: .5px solid black;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    font-size: 0.9rem;
-    min-width: 220px;
-    min-height: 220px;
-    max-width: 220px;
-    display: none;
-    z-index: 1000;
-  
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: .8rem;
-    padding: 1.8rem .5rem .5rem .5rem;
-  } */
 }

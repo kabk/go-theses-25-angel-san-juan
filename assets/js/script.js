@@ -71,8 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.body.appendChild(popup);
 
                 const rect = this.getBoundingClientRect();
-                popup.style.top = `${window.scrollY + rect.top - 40}px`;
-                popup.style.left = `${rect.left + 20}px`;
+                popup.style.top = `${window.scrollY + rect.top + 20}px`;
+                popup.style.left = rect.left > ( window.innerWidth - 300 ) ? `${window.innerWidth - ( 300 - 20)}px`:  `${rect.left + 20}px`;             
                 popup.style.display = "block";
 
                 document.addEventListener("click", function hidePopup(e) {
